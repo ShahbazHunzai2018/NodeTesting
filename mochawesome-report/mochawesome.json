@@ -1,0 +1,167 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 0,
+    "passes": 0,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-01-06T19:38:11.285Z",
+    "end": "2021-01-06T19:38:14.682Z",
+    "duration": 3397,
+    "testsRegistered": 2,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 2,
+    "hasOther": true,
+    "skipped": 2,
+    "hasSkipped": true
+  },
+  "results": [
+    {
+      "uuid": "3bb73338-0dfc-47c7-b32b-08be3bcf0d1c",
+      "title": "",
+      "fullFile": "",
+      "file": "",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "69dcf5aa-f8da-49e7-a979-bd36a94bccd7",
+          "title": "Google search automated testing",
+          "fullFile": "C:\\Users\\GB\\Automation-With-Selenium-And-Node.js-master\\test\\homePage.test.js",
+          "file": "\\test\\homePage.test.js",
+          "beforeHooks": [
+            {
+              "title": "\"before each\" hook for \"find the input box and google search button\"",
+              "fullTitle": "Google search automated testing \"before each\" hook for \"find the input box and google search button\"",
+              "timedOut": false,
+              "duration": 3362,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "page = new Page();\ndriver = page.driver;\nawait page.visit('https://www.google.com/');",
+              "err": {
+                "message": "SessionNotCreatedError: session not created: This version of ChromeDriver only supports Chrome version 88\nCurrent browser version is 87.0.4280.88 with binary path C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+                "estack": "SessionNotCreatedError: session not created: This version of ChromeDriver only supports Chrome version 88\nCurrent browser version is 87.0.4280.88 with binary path C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe\n    at Object.throwDecodedError (node_modules\\selenium-webdriver\\lib\\error.js:550:15)\n    at parseHttpResponse (node_modules\\selenium-webdriver\\lib\\http.js:542:13)\n    at Executor.execute (node_modules\\selenium-webdriver\\lib\\http.js:468:26)\n    at processTicksAndRejections (node:internal/process/task_queues:93:5)",
+                "diff": null
+              },
+              "uuid": "74a917f4-2bde-4f29-ae5f-3f0c0ae6434b",
+              "parentUUID": "69dcf5aa-f8da-49e7-a979-bd36a94bccd7",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "afterHooks": [
+            {
+              "title": "\"after each\" hook for \"find the input box and google search button\"",
+              "fullTitle": "Google search automated testing \"after each\" hook for \"find the input box and google search button\"",
+              "timedOut": false,
+              "duration": 3,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "await page.quit();",
+              "err": {
+                "message": "SessionNotCreatedError: session not created: This version of ChromeDriver only supports Chrome version 88\nCurrent browser version is 87.0.4280.88 with binary path C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+                "estack": "SessionNotCreatedError: session not created: This version of ChromeDriver only supports Chrome version 88\nCurrent browser version is 87.0.4280.88 with binary path C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe\n    at Object.throwDecodedError (node_modules\\selenium-webdriver\\lib\\error.js:550:15)\n    at parseHttpResponse (node_modules\\selenium-webdriver\\lib\\http.js:542:13)\n    at Executor.execute (node_modules\\selenium-webdriver\\lib\\http.js:468:26)\n    at processTicksAndRejections (node:internal/process/task_queues:93:5)",
+                "diff": null
+              },
+              "uuid": "1b3d3c0d-51b3-4d18-be20-cabd61b594cd",
+              "parentUUID": "69dcf5aa-f8da-49e7-a979-bd36a94bccd7",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "tests": [
+            {
+              "title": "find the input box and google search button",
+              "fullTitle": "Google search automated testing find the input box and google search button",
+              "timedOut": false,
+              "duration": 0,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const result = await page.findInputAndButton();\nexpect(result.inputEnabled).to.equal(true);\nexpect(result.buttonText).to.include('Google');",
+              "err": {},
+              "uuid": "5730120d-26c0-4390-8cc9-a205331b1311",
+              "parentUUID": "69dcf5aa-f8da-49e7-a979-bd36a94bccd7",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "put keyword in search box and click search button",
+              "fullTitle": "Google search automated testing put keyword in search box and click search button",
+              "timedOut": false,
+              "duration": 0,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const result = await page.submitKeywordAndGetResult();\nexpect(result.length).to.be.above(10);",
+              "err": {},
+              "uuid": "a4073b5d-ada2-4744-8141-cd2efafc9b26",
+              "parentUUID": "69dcf5aa-f8da-49e7-a979-bd36a94bccd7",
+              "isHook": false,
+              "skipped": true
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [],
+          "pending": [],
+          "skipped": [
+            "5730120d-26c0-4390-8cc9-a205331b1311",
+            "a4073b5d-ada2-4744-8141-cd2efafc9b26"
+          ],
+          "duration": 0,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 50000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "8.2.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.1"
+    },
+    "marge": {
+      "options": {
+        "autoOpen": "true"
+      },
+      "version": "5.1.0"
+    }
+  }
+}
